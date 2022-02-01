@@ -18,4 +18,5 @@ print(Crime_data.text)
 crimes= BeautifulSoup(Crime_data.text)
 print(crimes, crimes.parser_class)
  
+print (hellow world)
  #from sklearn.pipeline import make_pipeline
