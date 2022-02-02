@@ -1,9 +1,24 @@
+from turtle import pd
 import requests
 from bs4 import BeautifulSoup
+#import pandas as pd
+
 
 cars = requests.get('https://carwiz.co.il/used-cars')
 soup = BeautifulSoup(cars.content , 'html.parser')
-print (soup)
+match = soup.find_all('div')
+#match = list(soup.children)
+
+# print(soup.prettify())
+print (match)
+# car_type = soup.select()
+
+# with open ('cars' ) as html_file:
+#     soup = BeautifulSoup(html_file , 'lxml')
+
+# car = soup.find('div')
+# print (car)
+
 
 
 
