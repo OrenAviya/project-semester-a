@@ -4,13 +4,16 @@ from bs4 import BeautifulSoup
 #import pandas as pd
 
 
-cars = requests.get('https://carwiz.co.il/used-cars')
-soup = BeautifulSoup(cars.content , 'html.parser')
-match = soup.find_all('div')
-#match = list(soup.children)
+one_car = requests.get('https://carwiz.co.il/used-cars/1b703714-c6c6-4c40-a62a-a445532dab9f/2018-%D7%A7%D7%99%D7%94-%D7%A1%D7%A4%D7%95%D7%A8%D7%98%D7%96')
+soup = BeautifulSoup(one_car.content , 'html.parser')
+# Details = soup.find('div' , class_='MuiBox-root jss1013 jss1007')
+# print (Details)
 
-# print(soup.prettify())
-print (match)
+muiBox = soup.select('h1')
+muiBox = soup.select('h1.MuiTypography-root')
+#print (soup.prettify)
+
+
 # car_type = soup.select()
 
 # with open ('cars' ) as html_file:
