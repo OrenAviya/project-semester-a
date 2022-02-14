@@ -8,4 +8,5 @@ TODO:
 * Decide how to test the vehicle type whether to create "is type" columns for each vehicle type
 * Write an action if there are duplicate lines and delete them
 * Alon wrote this
+* and again
 ן
